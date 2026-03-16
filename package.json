@@ -1,0 +1,50 @@
+{
+  "name": "@agent-harness/core",
+  "version": "0.1.0",
+  "description": "Agentic code techniques harness — ReAct, Reflexion, Tree of Thoughts, and more",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "harness": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:integration": "HARNESS_LIVE_TESTS=1 vitest run tests/integration",
+    "lint": "tsc --noEmit",
+    "cli": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "commander": "^12.1.0",
+    "openai": "^4.85.4",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "agent",
+    "llm",
+    "react",
+    "reflexion",
+    "tree-of-thoughts",
+    "agentic",
+    "harness"
+  ]
+}
